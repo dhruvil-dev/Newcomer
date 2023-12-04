@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="Style1.css">
+  <style>
+    body {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 170vh;
+      margin: 10;
+      font-family: 'Poppins', sans-serif;
+      background: -webkit-linear-gradient(left, #45b29e, #42fab6);
+    }
+
+    form {
+      max-width: 900px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    form h1,
+    form h3 {
+      color: #333;
+    }
+
+    form p {
+      margin: 10px 0;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    form input[type="button"] {
+      background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><p style="color:rgb(35, 9, 2);">Newcomer Nevigator</p></h1>
+    <h3><center><p style="color:rgb(121, 35, 9);"><em>(Start your career here, with us)</em></p></center></h3>
+  </header>
+
+ <nav>
+    <a href="Index.html"><input type="button" value="Home Page" id="btn"></a>&nbsp;
+    <a href="Available Property.html"><input type="button" value="Available Property" id="btn"></a>&nbsp;
+    <a href="Contact Form.html"><input type="button" value="Contact Form" id="btn"></a>&nbsp;
+    <a href="Site Map.html"><input type="button" value="Site Map" id="btn"></a>
+  </nav>
+
+  <form>
+    <h1>Job Application Form</h1>
+    <p>Please enter your details carefully to apply for the job.</p>
+
+    <!-- Personal Information -->
+    <p>Full Name:</p>
+    <input type="text" name="fullName" id="fullName" required>
+
+    <p>Email:</p>
+    <input type="text" name="email" id="email" required>
+
+    <p>Contact Number:</p>
+    <input type="text" name="contactNumber" id="contactNumber" required>
+
+    <!-- Job Information -->
+    <h3>Job Preferences</h3>
+
+    <p>Desired Position:</p>
+    <input type="text" name="desiredPosition" id="desiredPosition" required>
+
+    <p>Resume (PDF or Word):</p>
+    <input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required>
+
+    <!-- Additional Information -->
+    <h3>Additional Information</h3>
+
+    <p>Why do you want to work with us?</p>
+    <textarea name="reasonToWork" id="reasonToWork" cols="30" rows="8" required></textarea>
+
+    <br></br>
+    <input type="button" value="Submit" id="btn">
+  </form>
+
+  <footer>
+    Reach us out at (Email): <a href="mailto:">contact@a1.estate.com</a>
+    <h6> Copyright &copy; Dhruvil Patel, 301273271, Software Engineering Technician(#3408), Semester 1. </h6>
+  </footer>
+</body>
+
+</html>
