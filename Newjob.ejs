@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Application Form</title>
+  <title>New Job Listing Application Form</title>
   <link rel="stylesheet" href="/stylesheets/Style1.css">
   <style>
     body {
@@ -59,24 +59,23 @@
 
 <body>
   <header>
-    <h1><p style="color:rgb(35, 9, 2);">Newcomer Nevigator</p></h1>
-    <h3><center><p style="color:rgb(121, 35, 9);"><em>(Start your career here, with us)</em></p></center></h3>
+    <h1><p style="color:rgb(35, 9, 2);">Newcomer Navigator</p></h1>
+    <h3><center><p style="color:rgb(121, 35, 9);"><em>(Your Gateway to Career Success)</em></p></center></h3>
   </header>
 
- <nav>
+  <nav>
     <a href="/"><input type="button" value="Home Page" id="btn"></a>&nbsp;
-    <a href="/Available"><input type="button" value="Available Property" id="btn"></a>&nbsp;
-    <a href="/Contact"><input type="button" value="Contact Form" id="btn"></a>&nbsp;
+    <a href="/Edash"><input type="button" value="Job Option Page" id="btn"></a>&nbsp;
     <a href="/Site"><input type="button" value="Site Map" id="btn"></a>
   </nav>
 
-  <form>
-    <h1>Job Application Form</h1>
-    <p>Please enter your details carefully to apply for the job.</p>
+  <form action="/Submit" method="post">
+    <h1>New Job Listing Application Form</h1>
+    <p>Please provide the following details to submit a new job listing.</p>
 
-    <!-- Personal Information -->
-    <p>Full Name:</p>
-    <input type="text" name="fullName" id="fullName" required>
+    <!-- Employer Information -->
+    <p>Employer Name:</p>
+    <input type="text" name="employerName" id="employerName" required>
 
     <p>Email:</p>
     <input type="text" name="email" id="email" required>
@@ -84,28 +83,22 @@
     <p>Contact Number:</p>
     <input type="text" name="contactNumber" id="contactNumber" required>
 
-    <!-- Job Information -->
-    <h3>Job Preferences</h3>
+    <!-- Job Listing Details -->
+    <h3>Job Listing Information</h3>
 
-    <p>Desired Position:</p>
-    <input type="text" name="desiredPosition" id="desiredPosition" required>
+    <p>Job Title:</p>
+    <input type="text" name="jobTitle" id="jobTitle" required>
 
-    <p>Resume (PDF or Word):</p>
-    <input type="file" name="resume" id="resume" accept=".pdf, .doc, .docx" required>
-
-    <!-- Additional Information -->
-    <h3>Additional Information</h3>
-
-    <p>Why do you want to work with us?</p>
-    <textarea name="reasonToWork" id="reasonToWork" cols="30" rows="8" required></textarea>
+    <p>Job Description:</p>
+    <textarea name="jobDescription" id="jobDescription" cols="30" rows="8" required></textarea>
 
     <br></br>
-    <input type="button" value="Submit" id="btn">
+    <input type="button" value="Submit Job Listing" id="btn">
   </form>
 
   <footer>
-    Reach us out at (Email): <a href="mailto:">contact@a1.estate.com</a>
-    <h6> Copyright &copy; Newcomer Navigator 2023 </h6>
+    Reach us out at (Email): <a href="mailto:contact@newcomernavigator.com">contact@newcomernavigator.com</a>
+    <h6> Copyright &copy;  </h6>
   </footer>
 </body>
 
