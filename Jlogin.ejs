@@ -2,40 +2,73 @@
 <html lang="en">
   <head>
     <title>Job Seeker Login - Newcomer Navigator</title>
-    <link rel="stylesheet" href="Style1.css" />
+    <link rel="stylesheet" href="/stylesheets/Style1.css" />
   </head>
 
   <body>
   <header>
     <br><br>
-    <center><a href="Index.html" target="_blank"><img src="job Searc.jpeg" alt="logo" width="600" height="200"></a></center>
+    <center><a href="/" target="_blank"><img src="/images/job Searc.jpeg" alt="logo" width="600" height="200"></a></center>
     <br> </br>
     <h1><p style="color:rgb(35, 9, 2);">Newcomer Nevigator</p></h1>
     <h3><center><p style="color:rgb(121, 35, 9);"><em>(Start your career here, with us)</em></p></center></h3>
   </header>
 
   <nav>
-    <a href="/index"><input type="button" value="Home Page" id="btn"></a>&nbsp;
+    <a href="/"><input type="button" value="Home Page" id="btn"></a>&nbsp;
     <a href="About Us.html"><input type="button" value="About Us" id="btn"></a>&nbsp;
-    <a href="Site Map.html"><input type="button" value="Site Map" id="btn"></a>
+    <a href="/Site"><input type="button" value="Site Map" id="btn"></a>
   </nav>
 
     <main>
       <section>
         <h1>Job Seeker Login</h1>
         <!-- Job Seeker Login Form -->
-        <form action="JobSeekerDashboard.html" method="post">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required />
+        <form id="loginForm" action="/Joboption" >
+          <label for="email">Username:</label>
+          <input type="text" id="email" name="email" required />
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required />
 
-<a href="Job Option Page.html"><input type="button" value="Submit" id="btn"></a>
+        <button type="submit">Login</button>
+        
+        </form>
+        <form action="/Jregister">
+        <br></br>
+          Not a member -> <button type="submit">Register</button>
         </form>
         <!-- End of Job Seeker Login Form -->
       </section>
     </main>
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          const formData = {
+              email: document.getElementById('email').value,
+              password: document.getElementById('password').value
+          };
+
+          fetch('/users/signin', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData)
+          })
+          .then(response => response.json())
+          .then(data => {
+              console.log('Success:', data);
+              window.location.href = '/';
+              // Handle success, such as redirecting to a user profile page
+          })
+          .catch((error) => {
+              console.error('Error:', error);
+              // Handle errors, such as showing a login error message
+          });
+      });
+  </script>
 
     <hr
       style="background-color: gold; height: 2px; border: none; margin: 20px 0"
